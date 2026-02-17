@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Clourf</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Clourf Logo" class="logo-img">
+            <span class="logo-text">Clourf</span>
+        </div>
+        <div class="nav-links">
+            <span>Olá, {{ session['username'] }}</span>
+            <a href="{{ url_for('logout') }}" class="btn btn-primary">Sair</a>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <h1>Seus Arquivos</h1>
+        <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+            <input type="text" name="folder" placeholder="Nome da pasta (opcional)">
+            <input type="file" name="file" required>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+        <div class="files-list">
+            <h2>Arquivos</h2>
+            <ul>
+                {% for file in files %}
+                    <li>{{ file[3] }}/{{ file[2] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="notes-list">
+            <h2>Lembretes / Notas</h2>
+            <form action="{{ url_for('add_note') }}" method="POST">
+                <input type="text" name="content" placeholder="Nova nota" required>
+                <button type="submit" class="btn btn-primary">Adicionar</button>
+            </form>
+            <ul>
+                {% for note in notes %}
+                    <li>{{ note[2] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
