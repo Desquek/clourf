@@ -34,7 +34,7 @@ def init_db():
     conn.commit()
     conn.close()
 
-init_db()
+#init_db()
 
 # ---------------- Rotas ---------------- #
 
