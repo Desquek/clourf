@@ -1,0 +1,75 @@
+/* Containers de login/register */
+.auth-container {
+    width: 350px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.auth-container h1 {
+    margin-bottom: 20px;
+    color: #4A90E2;
+}
+
+.auth-container input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.auth-container button {
+    width: 95%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #4A90E2;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background: #9013FE;
+}
+
+.flash {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+.flash.success { background: #4CAF50; color: #fff; }
+.flash.danger { background: #F44336; color: #fff; }
+
+/* Dashboard */
+.dashboard {
+    padding: 40px 50px;
+}
+
+.dashboard h1 {
+    color: #4A90E2;
+    margin-bottom: 20px;
+}
+
+.files-list, .notes-list {
+    margin-top: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.files-list ul, .notes-list ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.files-list li, .notes-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
