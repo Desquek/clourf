@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clourf - Armazene, Crie e Compartilhe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Clourf Logo">
+                <span>Clourf</span>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('login') }}" class="btn">Login</a>
+                <a href="{{ url_for('register') }}" class="btn btn-secondary">Registrar</a>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Armazene seus arquivos, crie grupos e organize seu mundo digital</h1>
+            <p>O Clourf permite criar grupos, organizar arquivos, adicionar lembretes e interagir com membros de forma única e segura.</p>
+            <a href="{{ url_for('register') }}" class="btn btn-primary">Começar Agora</a>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/cloud_hero.png') }}" alt="Cloud Image">
+        </div>
+    </header>
+
+    <section class="features">
+        <h2>Funcionalidades do Clourf</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/upload_icon.png') }}" alt="Upload">
+                <h3>Upload de Arquivos</h3>
+                <p>Envie fotos, vídeos e documentos facilmente.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/group_icon.png') }}" alt="Grupo">
+                <h3>Criação de Grupos</h3>
+                <p>Crie grupos privados ou públicos e compartilhe conteúdo com segurança.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/notes_icon.png') }}" alt="Notas">
+                <h3>Lembretes e Notas</h3>
+                <p>Adicione notas que aparecem assim que você faz login.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
