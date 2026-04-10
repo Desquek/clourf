@@ -39,8 +39,7 @@ def init_db():
 # ---------------- Rotas ---------------- #
 @app.route("/")
 def index():
-    import os
-    return str(os.listdir("templates"))
+    return render_template("index.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
