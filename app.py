@@ -40,7 +40,11 @@ def init_db():
 @app.route("/")
 def index():
     import os
-    return str(os.listdir("templates"))
+    try:
+        files = os.listdir("templates")
+        return "PASTA OK: " + str(files)
+    except Exception as e:
+        return "ERRO: " + str(e)
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
